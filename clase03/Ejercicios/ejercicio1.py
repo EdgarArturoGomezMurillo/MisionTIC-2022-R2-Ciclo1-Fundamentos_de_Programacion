@@ -1,0 +1,6 @@
+print("escriba su primer nombre: ")
+nombre = input()
+apellido = input("ingrese su apellido:" )
+print(type(nombre))
+print(type(apellido))
+print("su nombre completo es: ", nombre, apellido)
