@@ -22,3 +22,9 @@ rango = range(len(lista[1]))
 for i in range:
     print(lista[1][i])
 
+
+
+
+
+
+
