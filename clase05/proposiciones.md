@@ -61,23 +61,23 @@ Fuente: https://concepto.de/proposiciones-simples-y-compuestas/
 
 Clasificar si son proposiciones simples (s) o si son proposiciones compuestas (c)
 
-1. ____ Está lloviendo.
-1. ____ El número 1 es un número natural.
-1. ____ Está lloviendo y hace calor.
-1. ____ Nuestra bandera es blanca y celeste.
-1. ____ En este país, el verano es muy caluroso.
-1. ____ Mañana será miércoles.
-1. ____ El 9 es divisor del 45, y el 3 es divisor del 9 y del 45.
-1. ____ El número 6 es menor al número 17.
-1. ____ El número 6 es mayor que el 3 y menor que el 7.
-1. ____ He pasado todas mis vacaciones en Grecia y Marruecos.
-1. ____ Hoy es 7 de octubre.
-1. ____ Su gato es marrón.
-1. ____ Si la información no es completa para oferentes y demandantes, hay una falla de mercado.
-1. ____ Mi hermano vende pastas.
-1. ____ La tierra es plana.
-1. ____ Marcos se dedica a la natación o al alpinismo.
-1. ____ Mario Vargas Llosa es un importante escritor.
-1. ____ Una ballena no es roja.
-1. ____ El número más grande no es 1000000.
-1. ____ Si el ovino come pasto, es herbívoro.
+1. __s__ Está lloviendo.
+1. __s__ El número 1 es un número natural.
+1. __c__ Está lloviendo y hace calor.
+1. __c__ Nuestra bandera es blanca y celeste.
+1. __c__ En este país, el verano es muy caluroso.
+1. __s__ Mañana será miércoles.
+1. __c__ El 9 es divisor del 45, y el 3 es divisor del 9 y del 45.
+1. __s__ El número 6 es menor al número 17.
+1. __c__ El número 6 es mayor que el 3 y menor que el 7.
+1. __c__ He pasado todas mis vacaciones en Grecia y Marruecos.
+1. __s__ Hoy es 7 de octubre.
+1. __s__ Su gato es marrón.
+1. __c__ Si la información no es completa para oferentes y demandantes, hay una falla de mercado.
+1. __s__ Mi hermano vende pastas.
+1. __s__ La tierra es plana.
+1. __c__ Marcos se dedica a la natación o al alpinismo.
+1. __s__ Mario Vargas Llosa es un importante escritor.
+1. __s__ Una ballena no es roja.
+1. __s__ El número más grande no es 1000000.
+1. __c__ Si el ovino come pasto, es herbívoro.

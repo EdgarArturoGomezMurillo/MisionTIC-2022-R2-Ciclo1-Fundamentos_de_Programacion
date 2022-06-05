@@ -11,7 +11,7 @@ def total_a_pagar(valor_pagar_sin_iva, iva_decimal):
         aplicar_iva = (valor_pagar_sin_iva * iva_decimal) + valor_pagar_sin_iva
     else:
         aplicar_iva = (valor_pagar_sin_iva * 0.19) + valor_pagar_sin_iva           
-    print(("el valor total a pagar es :{} ".format(aplicar_iva)))
+    return(("el valor total a pagar es :{} ".format(aplicar_iva)))
 
 total = total_a_pagar(valor_pagar_sin_iva, iva_decimal)
 print(total)
