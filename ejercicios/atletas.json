@@ -1,0 +1,22 @@
+{
+  "datos_basicos": [
+    {
+      "nombres": "arturo",
+      "apellidos": "gomez",
+      "edad": 20,
+      "tiempo": 5
+    },
+    {
+      "nombres": "valeria",
+      "apellidos": "gomez",
+      "edad": 25,
+      "tiempo": 2
+    },
+    {
+      "nombres": "juan",
+      "apellidos": "gomez",
+      "edad": 23,
+      "tiempo": 3
+    }
+  ]
+}
