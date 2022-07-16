@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "SwitchJava/src",
-        "Matriz/src"
+        "Matriz/src",
+        "reto_2_java/src"
     ]
 }
