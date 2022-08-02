@@ -27,5 +27,4 @@ public class PrecioTotal {
         System.out.println("La suma del precio de los computadores de mesa es de " + totalComputadoresMesa);
         System.out.print("La suma del precio de los computadores portátiles es de " + totalComputadoresPortatiles);
     }
-
 }

@@ -1,0 +1,18 @@
+SELECT ID_MaterialConstruccion AS ID,
+       Nombre_Material NOMBRE,
+       Precio_Unidad PRECIO
+  FROM MaterialConstruccion;
+
+SELECT P.ID_Proyecto AS ID,
+       P.Constructora,
+       P.Ciudad,
+       P.Clasificacion,
+       T.Estrato,
+       L.Nombre || ' ' || L.Primer_Apellido || ' ' || L.Segundo_Apellido LIDER
+  FROM Lider L,
+       Proyecto P
+       NATURAL JOIN
+       Tipo T
+ WHERE Banco_Vinculado = 'Conavi'
+ ORDER BY P.Ciudad,
+          P.Constructora;

@@ -1,0 +1,117 @@
+SELECT employee_id,
+       first_name,
+       last_name,
+       salary,
+       salary + 200 Bono
+  FROM employees;-- Bonifación por todos los meses del año *12
+
+SELECT first_name,
+       last_name,
+       salary,
+       12 * (salary + 200) "Bonificación Anual"
+  FROM employees;
+
+SELECT first_name,
+       phone_number
+  FROM employees;-- Alias de las columnas
+
+SELECT employee_id AS [Identificación Empleado],
+       first_name Nombre,
+       last_name "Apellidos"
+  FROM employees;-- Concatenar es unir ||
+
+SELECT last_name || ', ' || first_name "Apellidos y nombres"
+  FROM employees;-- Quiero no mostrar los elementos repetidos --- DISTINCT
+
+SELECT DISTINCT department_id
+  FROM employees
+ ORDER BY department_id;-- Ejercios Básicos.. Ejercicio No. 1
+
+SELECT employee_id,
+       last_name,
+       job_id,
+       hire_date AS StartDate
+  FROM employees;-- Ejercicio No. 2
+
+SELECT DISTINCT job_id
+  FROM employees;
+
+SELECT DISTINCT job_id
+  FROM employees
+ ORDER BY job_id;-- Ejerccio No. 3
+
+SELECT employee_id "Emp#",
+       last_name "Employee",
+       job_id "Job",
+       hire_date "Hire Date"
+  FROM employees;-- Ejercicio No. 4
+
+SELECT last_name || ', ' || job_id "Employee and Title"
+  FROM employees;-- Ejercicio No. 5
+
+SELECT employee_id || ', ' || first_name || ', ' || last_name || ', ' || email || ', ' || phone_number || ', ' || hire_date || ', ' || job_id || ', ' || salary || ', ' || manager_id || ', ' || department_id AS THE_OUPUT
+  FROM employees e;
+
+SELECT employee_id || ", " || first_name || ", " || last_name || ", " || email || ", " || phone_number || ", " || hire_date || ", " || job_id || ", " || salary || ", " || manager_id || ", " || department_id THE_OUTPUT
+  FROM employees;-- Restricción --- WHERE -- donde se cumpla la igualdad...
+-- Mostrar empleado con ID=100;
+SELECT employee_id,
+       first_name,
+       last_name
+  FROM employees
+ WHERE employee_id = 100;-- Buscar por el nombre del empleado -- John
+
+SELECT employee_id,
+       first_name,
+       last_name
+  FROM employees
+ WHERE first_name = 'John';-- Búsquedas por fechas
+
+SELECT employee_id,
+       first_name,
+       last_name
+  FROM employees
+ WHERE hire_date = '1999-08-10';-- Mostrar los empleados que tengan un salario entre 5000 y 10000
+
+SELECT first_name,
+       last_name,
+       salary
+  FROM employees
+ WHERE salary BETWEEN 5000 AND 10000;-- Empleados que ganan un salario igual o superior a 20000
+
+SELECT first_name,
+       last_name,
+       phone_number,
+       job_id,
+       salary
+  FROM employees
+ WHERE salary >= 20000;-- Empleados quiénes son presidente, programadores, contadores públicos
+
+SELECT employee_id,
+       first_name,
+       last_name,
+       job_id
+  FROM employees
+ WHERE job_id IN (4, 9, 1);-- Empleados su nombre inicia con la letra K
+
+SELECT first_name,
+       last_name
+  FROM employees
+ WHERE first_name LIKE 'K%';-- Empleados en su apellido la tercera letra sea una a
+
+SELECT first_name,
+       last_name
+  FROM employees
+ WHERE last_name LIKE '__a%';-- Columnas que tengan NULL
+
+SELECT first_name,
+       last_name,
+       phone_number
+  FROM employees
+ WHERE phone_number IS NULL;-- Columnas no NULL
+
+SELECT first_name,
+       last_name,
+       phone_number
+  FROM employees
+ WHERE phone_number IS NOT NULL;
