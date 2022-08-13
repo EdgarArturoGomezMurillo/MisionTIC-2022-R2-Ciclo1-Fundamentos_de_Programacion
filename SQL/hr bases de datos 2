@@ -1,0 +1,226 @@
+SELECT employee_id,
+       first_name,
+       last_name,
+       salary,
+       salary + 200 Bono
+  FROM employees;-- Bonifación por todos los meses del año *12
+
+SELECT first_name,
+       last_name,
+       salary,
+       12 * (salary + 200) "Bonificación Anual"
+  FROM employees;
+
+SELECT first_name,
+       phone_number
+  FROM employees;-- Alias de las columnas
+
+SELECT employee_id AS [Identificación Empleado],
+       first_name Nombre,
+       last_name "Apellidos"
+  FROM employees;-- Concatenar es unir ||
+
+SELECT last_name || ', ' || first_name "Apellidos y nombres"
+  FROM employees;-- Quiero no mostrar los elementos repetidos --- DISTINCT
+
+SELECT DISTINCT department_id
+  FROM employees
+ ORDER BY department_id;-- Ejercios Básicos.. Ejercicio No. 1
+
+SELECT employee_id,
+       last_name,
+       job_id,
+       hire_date AS StartDate
+  FROM employees;-- Ejercicio No. 2
+
+SELECT DISTINCT job_id
+  FROM employees;
+
+SELECT DISTINCT job_id
+  FROM employees
+ ORDER BY job_id;-- Ejerccio No. 3
+
+SELECT employee_id "Emp#",
+       last_name "Employee",
+       job_id "Job",
+       hire_date "Hire Date"
+  FROM employees;-- Ejercicio No. 4
+
+SELECT last_name || ', ' || job_id "Employee and Title"
+  FROM employees;-- Ejercicio No. 5
+
+SELECT employee_id || ', ' || first_name || ', ' || last_name || ', ' || email || ', ' || phone_number || ', ' || hire_date || ', ' || job_id || ', ' || salary || ', ' || manager_id || ', ' || department_id AS THE_OUPUT
+  FROM employees e;
+
+SELECT employee_id || ", " || first_name || ", " || last_name || ", " || email || ", " || phone_number || ", " || hire_date || ", " || job_id || ", " || salary || ", " || manager_id || ", " || department_id THE_OUTPUT
+  FROM employees;-- Restricción --- WHERE -- donde se cumpla la igualdad...
+-- Mostrar empleado con ID=100;
+SELECT employee_id,
+       first_name,
+       last_name
+  FROM employees
+ WHERE employee_id = 100;-- Buscar por el nombre del empleado -- John
+
+SELECT employee_id,
+       first_name,
+       last_name
+  FROM employees
+ WHERE first_name = 'John';-- Búsquedas por fechas
+
+SELECT employee_id,
+       first_name,
+       last_name
+  FROM employees
+ WHERE hire_date = '1999-08-10';-- Mostrar los empleados que tengan un salario entre 5000 y 10000
+
+SELECT first_name,
+       last_name,
+       salary
+  FROM employees
+ WHERE salary BETWEEN 5000 AND 10000;-- Empleados que ganan un salario igual o superior a 20000
+
+SELECT first_name,
+       last_name,
+       phone_number,
+       job_id,
+       salary
+  FROM employees
+ WHERE salary >= 20000;-- Empleados quiénes son presidente, programadores, contadores públicos
+
+SELECT employee_id,
+       first_name,
+       last_name,
+       job_id
+  FROM employees
+ WHERE job_id IN (4, 9, 1);-- Empleados su nombre inicia con la letra K
+
+SELECT first_name,
+       last_name
+  FROM employees
+ WHERE first_name LIKE 'K%';-- Empleados en su apellido la tercera letra sea una a
+
+SELECT first_name,
+       last_name
+  FROM employees
+ WHERE last_name LIKE '__a%';-- Columnas que tengan NULL
+
+SELECT first_name,
+       last_name,
+       phone_number
+  FROM employees
+ WHERE phone_number IS NULL;-- Columnas no NULL
+
+SELECT first_name,
+       last_name,
+       phone_number
+  FROM employees
+ WHERE phone_number IS NOT NULL;-- operaciones matematicas
+
+SELECT last_name,
+       salary,
+       job_id,
+       job_title,
+       MOD(salary, 5000) 
+  FROM employees
+       NATURAL JOIN
+       jobs
+ WHERE job_id = 16;
+
+SELECT employee_id,
+       first_name || ' ' || last_name AS [Nombres y Apellidos],
+       department_id,
+       job_id,
+       J.job_title
+  FROM employees
+       NATURAL JOIN
+       jobs J
+ WHERE LOWER(last_name) = 'higgins';
+ --mostrar la fecha actual
+ SELECT date('now');
+ --Calcular el ultimo dia del mes actual
+ SELECT date ('now', 'start of month','+1 month','-1 day')
+ --calcule la fecha y la hora con una marca de tiempo unix 1092941466
+ -- seleccione la fecha del pirmer martes de octubre para el año actual
+---CASE
+SELECT last_name, salary, 
+CASE
+WHEN salary>5000
+THEN 'no cumple' 
+ELSE 'El salario no cumole con la condicion' 
+END AS RESPUESTA
+FROM employees;
+--anidadas 
+SELECT first_name || ' ' || last_name AS [Nombres y Apellidos],
+       UPPER(last_name) AS [Apellido en mayuscula],
+       D.department_name,
+       last_name || '_PAGO'
+  FROM employees
+       NATURAL JOIN
+       departments D
+ WHERE job_id = 9;
+-------------------------------------------------------------------------------
+---- EJ 1
+SELECT employee_id,
+       last_name,
+       salary,
+       ROUND(salary * 0.155 + salary, 0) AS [New salary]
+  FROM employees;
+  
+ SELECT employee_id,
+       last_name,
+       salary,
+       ROUND(salary * 0.155 + salary, 0) AS [New salary],
+       ROUND(salary * 0.155 + salary, 0)-salary AS [increase]
+  FROM employees;
+----- ejercicio 12
+SELECT job_title AS Job,
+       CASE job_id WHEN 5 THEN 'A' WHEN 15 THEN 'B' WHEN 9 THEN 'C' WHEN 16 THEN 'D' WHEN 18 THEN 'E' ELSE '0' END AS GRADE
+  FROM employees
+       NATURAL JOIN
+       jobs J;
+-----------------------------------------------------------------------------------------------------------------------------------
+SELECT AVG(salary) AS PROMEDIO,
+MAX(salary) AS "SALARIO MAXIMO",
+MIN(salary) AS "SALARIO MINIMO",
+SUM(salary) AS "SUMATORIA"
+FROM employees 
+WHERE job_id = 9;
+SELECT COUNT( * ) 
+  FROM employees
+ WHERE department_id = 10;-- Mostar id del depr , el promedio del salario por dept
+
+SELECT department_id,
+       AVG(salary) 
+  FROM employees
+ GROUP BY department_id;-- Mostar id del departamento , el promedio del salario por dept, empleados cullo maximo salario es mayor a 10.000
+-- ---- condicion grupal
+SELECT department_id,
+       MAX(salary) 
+  FROM employees
+ GROUP BY department_id
+HAVING MAX(salary) > 10000;-- NATURAL JOIN
+
+SELECT D.department_id,
+       D.department_name,
+       D.location_id,
+       L.city
+  FROM departments D
+       NATURAL JOIN
+       locations L;
+-----JOIN USING
+SELECT E.employee_id, E.last_name, D.location_id, E.department_id
+FROM employees E JOIN departments D USING(department_id);
+
+---------JOIN ON
+
+SELECT E.employee_id,
+       E.last_name,
+       D.department_id,
+       D.location_id
+  FROM employees E
+       JOIN
+       departments D ON (E.department_id = D.department_id);
+
+
+
+
