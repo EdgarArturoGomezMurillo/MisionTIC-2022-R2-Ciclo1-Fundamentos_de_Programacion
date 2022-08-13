@@ -9,10 +9,11 @@ package com.mycompany.reto5.vista;
  * @author artur
  */
 public class frmnPrincipal extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form frmnPrincipal
      */
+    
     public frmnPrincipal() {
         initComponents();
     }
