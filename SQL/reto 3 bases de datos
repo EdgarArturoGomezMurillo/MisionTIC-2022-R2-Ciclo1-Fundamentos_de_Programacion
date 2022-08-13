@@ -1,18 +1,62 @@
+---Consulta 1
 SELECT ID_MaterialConstruccion AS ID,
-       Nombre_Material NOMBRE,
-       Precio_Unidad PRECIO
-  FROM MaterialConstruccion;
+       Nombre_Material AS NOMBRE,
+       Precio_Unidad AS PRECIO
+  FROM MaterialConstruccion
+ WHERE Importado = 'Si'
+ ORDER BY Nombre_Material;
 
+---Consulta 2
 SELECT P.ID_Proyecto AS ID,
        P.Constructora,
        P.Ciudad,
        P.Clasificacion,
        T.Estrato,
-       L.Nombre || ' ' || L.Primer_Apellido || ' ' || L.Segundo_Apellido LIDER
-  FROM Lider L,
-       Proyecto P
-       NATURAL JOIN
-       Tipo T
- WHERE Banco_Vinculado = 'Conavi'
- ORDER BY P.Ciudad,
-          P.Constructora;
+       L.Nombre || ' ' || L.Primer_Apellido || ' ' || L.Segundo_Apellido AS LIDER
+  FROM Proyecto P
+       JOIN
+       Tipo T ON (P.ID_Tipo = T.ID_Tipo) 
+       JOIN
+       Lider L ON (P.ID_Lider = L.ID_Lider) 
+ WHERE P.Banco_Vinculado = 'Conavi'
+ ORDER BY Fecha_Inicio DESC,
+          Ciudad,
+          Constructora;
+----Consulta 3
+SELECT Ciudad,
+       Clasificacion,
+       COUNT(*) TOTAL,
+       MIN(Fecha_Inicio) VIEJO,
+       MAX(Fecha_Inicio) RECIENTE
+  FROM proyecto P
+ WHERE Clasificacion NOT IN ('Casa Campestre', 'Condominio') 
+ GROUP BY Ciudad,
+          Clasificacion
+ ORDER BY Ciudad,
+          Clasificacion;
+
+-------consulta 4
+SELECT P.ID_Proyecto,
+       SUM(C.Cantidad * MC.Precio_Unidad) AS VALOR
+  FROM Proyecto P
+       JOIN
+       Compra C ON (P.ID_Proyecto = C.ID_Proyecto) 
+       JOIN
+       MaterialConstruccion MC ON (C.ID_MaterialConstruccion = MC.ID_MaterialConstruccion) 
+ WHERE C.Pagado = 'No'
+ GROUP BY P.ID_Proyecto
+HAVING SUM(C.Cantidad * MC.Precio_Unidad) > 50000
+ ORDER BY VALOR DESC;
+----- consulta 5
+SELECT L.Nombre||' '||L.Primer_Apellido||' '||L.Segundo_Apellido AS LIDER,
+SUM(C.Cantidad*MC.Precio_Unidad) AS VALOR
+FROM Lider L
+JOIN Proyecto P ON (P.ID_Lider=L.ID_Lider)
+JOIN Compra C ON(P.ID_Proyecto=C.ID_Proyecto)
+JOIN MaterialConstruccion MC ON(C.ID_MaterialConstruccion=MC.ID_MaterialConstruccion)
+GROUP BY L.Nombre||' '||L.Primer_Apellido||' '||L.Segundo_Apellido
+ORDER BY VALOR DESC
+LIMIT 10;
+
+          
+

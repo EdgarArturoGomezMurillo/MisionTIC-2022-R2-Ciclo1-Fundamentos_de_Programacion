@@ -92,5 +92,6 @@ public class conjuntos {
             mapa4.put(cedula, nombre);
         }
         System.out.println(mapa4);
+        System.out.println();
     }
 }
