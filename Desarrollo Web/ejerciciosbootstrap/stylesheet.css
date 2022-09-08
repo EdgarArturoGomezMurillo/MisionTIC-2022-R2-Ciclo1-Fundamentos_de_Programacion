@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(124, 131, 131);
+}
+.nav-link {
+  color: aqua;
+}
+.flexo {
+  display: flexbox;
+  background-color: rgba(92, 92, 92, 0.368);
+  
+  
+}

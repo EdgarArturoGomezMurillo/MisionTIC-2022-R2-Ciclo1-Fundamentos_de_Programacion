@@ -1,0 +1,94 @@
+* {
+  font-family: Verdana;
+}
+body {
+  background-color: rgb(187, 245, 245);
+}
+.container {
+  background-color: rgb(182, 182, 182);
+  width: 90%;
+  margin: auto; /*centrar pagina*/
+  /*padding: 10px, 20px, 10px, 20px; arriba, abajo, derecha, izquierda
+  padding: 10px, 20px; arriba, abajo 10px, derecha, izquierda 20px
+  padding: 10px; todos los valores*/
+  margin-top: 10px;
+}
+header {
+  width: 100%;
+}
+main {
+  padding: 5px 20px;
+}
+
+.menu__lista {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(40, 77, 65);
+}
+.menu__lista li {
+  float: left;
+}
+
+.menu__lista li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu__lista li a:hover {
+  background-color: rgb(75, 144, 144);
+  color: rgb(3, 3, 3);
+}
+.img__imagen {
+  width: 50%;
+}
+.img__centrada {
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(40, 77, 65);
+  padding: 1px 10px;
+  overflow: hidden;
+}
+.img__facebook {
+  width: 40px;
+}
+.bloque {
+  display: inline;
+  color: red;
+}
+.flexcontiene {
+  display: flex;
+}
+.relativo {
+  position: relative;
+  border: 2px solid red;
+  left: -10px;
+  background-color: aquamarine;
+}
+.fixed {
+  position: fixed;
+  top: 0px;
+  border: 2px;
+  top: 530px;
+  right: 0px;
+}
+.relativo2 {
+  position: relative;
+  width: 400px;
+  background-color: rgb(110, 110, 228);
+  height: 200px;
+}
+.absoluto {
+  width: 200px;
+  position: absolute;
+  background-color: rgb(184, 152, 214);
+  left: 50px;
+}
+.sinoverflow { height: 200px; width: 200px; background-color: rgb(138, 138, 239); }
+.conoverflow { height: 200px; width: 200px; background-color: aqua; overflow: auto;}

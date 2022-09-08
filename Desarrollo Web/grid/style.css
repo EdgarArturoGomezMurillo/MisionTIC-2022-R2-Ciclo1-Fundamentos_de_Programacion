@@ -1,0 +1,59 @@
+.container {
+  background-color: grey;
+  margin-top: 10px;
+}
+.container--fluid {
+  background-color: rgb(165, 155, 155);
+  margin-top: 10px;
+}
+.container--sm {
+  background-color: aqua;
+}
+.img {
+  display: flex;
+}
+.navbar {
+  background-color: blueviolet;
+  color: white !important;
+}
+.navbar-brand {
+  color: white;
+}
+.navbar-brand:hover {
+  color: blueviolet;
+}
+.nav-link {
+  color: white;
+}
+.nav-link:hover {
+  color: blueviolet;
+}
+.nav-link.active {
+  color: white !important;
+}
+.nav-link.active:hover {
+  color: blueviolet !important;
+}
+.nav-link.dropdown-toggle:hover{color: blueviolet !important; }
+.nav-item{color: white !important;}
+.nav-item:hover{color: blueviolet !important; }
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}

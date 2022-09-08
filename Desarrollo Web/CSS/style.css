@@ -1,0 +1,20 @@
+h3 {
+  color: purple;
+}
+.especial {
+  color: brown;
+}
+#idp {
+  text-align: justify;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+}
+h4 + h5 {
+  color: #fff;
+}
+
+h4~h5 { color: #fff; }
+p>span {font-family: Verdana;}
+a { color: inherit;}
+.parrafo{color: blue !important;}
