@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="#carrusel">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#galeria">Galeria</a>
@@ -41,19 +41,16 @@
                 aria-expanded="false"
                 style="color: white"
               >
-                Menu
+                Sobre Nosotros
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#mision">Mision</a></li>
+                <li><a class="dropdown-item" href="#vision">Vision</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#politicas">Politicas</a>
                 </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -119,7 +116,7 @@
       </div>
 
       <!-- The slideshow/carousel -->
-      <div class="carousel-inner">
+      <div class="carousel-inner" id="carrusel">
         <div class="carousel-item active">
           <img
             src="slides/slide1.jpg"
@@ -180,6 +177,40 @@
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
+    <!-- seccion de mision -->
+    <section id="mision">
+      <h2>Mision</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus id molestiae saepe, impedit minus unde error sint iste perspiciatis recusandae reiciendis? Quas possimus nulla, libero accusamus ea vitae quaerat unde.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum,
+        atque laborum culpa illo optio odit omnis blanditiis mollitia similique
+        ducimus dolorum provident consectetur id quae saepe amet tempora animi?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nobis
+        voluptatum accusantium tempore quaerat voluptas voluptate. Aspernatur,
+        dolorem! Eius ipsa ab error suscipit dolor illum sapiente quisquam amet
+        officia dolores?
+      </p>
+    </section>
+    <!-- fin seccion mision -->
+        <!-- seccion de vision -->
+        <section id="vision">
+          <h2>Vision</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus id molestiae saepe, impedit minus unde error sint iste perspiciatis recusandae reiciendis? Quas possimus nulla, libero accusamus ea vitae quaerat unde.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum,
+            atque laborum culpa illo optio odit omnis blanditiis mollitia similique
+            ducimus dolorum provident consectetur id quae saepe amet tempora animi?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nobis
+            voluptatum accusantium tempore quaerat voluptas voluptate. Aspernatur,
+            dolorem! Eius ipsa ab error suscipit dolor illum sapiente quisquam amet
+            officia dolores?
+          </p>
+        </section>
+        <!-- fin seccion vision -->
     <!-- contenedores -->
     <div class="container--fluid">
       <h2>Esto es un container de Bootstrap</h2>
@@ -356,6 +387,25 @@
       </div>
       </div>
     </div>
+            <!-- seccion de politicas -->
+            <div class="container--fluid">
+              <section id="politicas">
+                <h2>politicas</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus id molestiae saepe, impedit minus unde error sint iste perspiciatis recusandae reiciendis? Quas possimus nulla, libero accusamus ea vitae quaerat unde.</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum,
+                  atque laborum culpa illo optio odit omnis blanditiis mollitia similique
+                  ducimus dolorum provident consectetur id quae saepe amet tempora animi?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nobis
+                  voluptatum accusantium tempore quaerat voluptas voluptate. Aspernatur,
+                  dolorem! Eius ipsa ab error suscipit dolor illum sapiente quisquam amet
+                  officia dolores?
+                </p>
+              </section>
+            </div>
+              <!-- fin seccion politicas -->
     <!-- offcanvas -->
     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
       buscar offcanvas
@@ -396,8 +446,11 @@
         <!-- fin galeria -->
     </section>
     <!-- fin seccion de galeria -->
+    <footer>
+      <a href="#" class="btn-flotante">^</a>
     <script src="bootstrap/poopers/bootstrap.min.js"></script>
     <script src="bootstrap/poopers/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+  </footer>
   </body>
 </html>
