@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JavaScript Ejemplo</title>
+  </head>
+  <body>
+    <h2>Modo de visualizacion para impresion</h2>
+    <button onclick="window.print();">Print</button>
+    <h2>modo de visualizacion innerHTML</h2>
+    <button
+      onclick="document.getElementById('hola').innerHTML='hola mundo desde JS';"
+    >
+      hola mundo con JS
+    </button>
+    <p id="hola"></p>
+    <h2>funcion getElementByName() por name...</h2>
+    <button onclick="document.getElementByName('fecha')[0].innerHTML= Date();">
+      Clic para conocer la fecha del sistema
+    </button>
+    <h2>otro p fecha</h2>
+    <p name="fecha"></p>
+    <h2>funcion getElementByTagName por tags</h2>
+    <h2>usuarios</h2>
+    <p>arturo</p>
+    <p>julian</p>
+    <p>pepe</p>
+    <br />
+    <br />
+    <h2>funcion hola mundo</h2>
+    <button onclick="holamundofuncion();">clic para ver hola mundo</button>
+    <br />
+    <br />
+    <button onclick="encender();">Encender</button>
+    <img src="img/foco.gif" alt="" id="foco" />
+    <button onclick="apagar();">Apagar</button>
+    <h2>formulario de registro al sistema</h2>
+    <div class="formulario">
+      <form action="javascript:datosbasicos();">
+        <label for="fname">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="firstname"
+          placeholder="Your name.."
+        />
+
+        <label for="lname">Apellidos</label>
+        <input
+          type="text"
+          id="apellido"
+          name="lastname"
+          placeholder="Your last name.."
+        />
+
+        <label for="country">Country</label>
+        <select id="ciudad" name="country">
+          <option value="Colombia">Colombia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <script>
+      //esto es un comentario
+      /*esto es un comentario en varias lineas*/
+      document.write("<br>");
+      document.write("esto es un texto desde JS");
+      document.write("<br>");
+      document.write(
+        "esto es un texto despues de un salto de lineas se puede meter css y html dentro de JS"
+      );
+      document.write("<h2> soy un h2 con JS </h2> ");
+    </script>
+    <!-- por buena practica hay que linkear el JS antes del body -->
+    <script src="script.js"></script>
+  </body>
+</html>
